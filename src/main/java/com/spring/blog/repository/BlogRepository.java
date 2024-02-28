@@ -42,4 +42,7 @@ public interface BlogRepository {
     // 분리할 방법이 없으므로 메서드명을 다르게 사용합니다.
     void update(Blog blog);
 
+    // 추가 기능 : 목록에서 글 클릭해서 detail 페이지로 조회 시 조회수 카운트해줌.
+    long viewUpdate(Blog blog);
+
 }
