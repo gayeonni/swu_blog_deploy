@@ -18,6 +18,12 @@ public class BlogServiceImpl implements BlogService {
 
     ReplyRepository replyRepository;
 
+    // 추가 기능 : 목록에서 글 클릭해서 detail 페이지로 조회 시 조회수 카운트해줌.
+    @Override
+    public long viewUpdate(Blog blog) {
+        return blogRepository.viewUpdate(blog);
+    }
+
     @Autowired // 생성자 주입이 속도가 더 빠름.
     public BlogServiceImpl(BlogRepository blogRepository, ReplyRepository replyRepository){
         this.blogRepository = blogRepository;
