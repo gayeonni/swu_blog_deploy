@@ -87,4 +87,14 @@
         (null, '2번유저', '2번제목', '2번본문', now(), now(), null),
         (null, '3번유저', '3번제목', '3번본문', now(), now(), null)
     </insert>
+
+    <!-- 추가기능: 조회수 업데이트 -->
+    <update id="viewUpdate" parameterType="com.spring.blog.entity.Blog">
+        UPDATE
+            blog
+        SET
+            blog_count=#{blogCount}+1
+        WHERE
+            blog_id = #{blogId}
+    </update>
 </mapper>
