@@ -62,6 +62,9 @@ public class BlogController {
 
         //model.addAttribute("blog", blogService.findById(blogId));
 
+        // 추가기능: 조회수 추가해주기
+        blogService.viewUpdate(blog);
+                
         // /WEB-INF/views/blog/detail.jsp
         return "blog/detail";
     }
